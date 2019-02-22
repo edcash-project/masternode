@@ -6,7 +6,7 @@
 2. Login to your newly launched server
 3. Copy and paste the following line into the server:
 
-```wget https://github.com/edcash-project/masternode && ./edcash-masternode.sh```
+```curl -sL https://raw.githubusercontent.com/edcash-project/masternode/master/edcash-masternode.sh | sudo -E bash -```
 
 4. Open your wallet debug console:
 
