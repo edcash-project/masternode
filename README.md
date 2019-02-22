@@ -1,4 +1,7 @@
 # edcash Masternode Install Guide
+
+# important to pay attention the script works only 1 masternode in each vps
+
 1. Launch an Ubuntu 16.04 server from either Vultr or DigitalOcean
 2. Login to your newly launched server
 3. Copy and paste the following line into the server:
