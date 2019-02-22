@@ -23,7 +23,7 @@ sleep 2
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
 echo -e "${GREEN}Completion: 2%...${NC}"
-sudo wget http://release.edcash.org/edcashmasternodeinstall.tar.gz
+sudo wget https://github.com/edcash-project/masternode/blob/master/edcashmasternodeinstall.tar.gz
 echo -e "${GREEN}Completion: 3%...${NC}"
 sudo tar -xzvf edcashmasternodeinstall.tar.gz
 echo -e "${GREEN}Completion: 5%...${NC}"
