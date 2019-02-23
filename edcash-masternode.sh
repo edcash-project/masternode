@@ -16,6 +16,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+IPL=$(curl -s4 icanhazip.com)
 IP==$(curl -s4 icanhazip.com)
 echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
 read KEY
@@ -92,4 +93,4 @@ rm -rf /root/edcashmasternodeinstall.tar.gz &>/dev/null
 rm -rf /root/edcashmasternodeinstall &>/dev/null
 echo -e "${GREEN}you masternode is installed and runing%...${NC}"
 sleep 2
-echo -e "${RED}please configure you masternode.conf in windows EX: mn1 $IP:5003 $KEY TXID INDEX"
+echo "${RED}please configure you masternode.conf in windows EX: mn1 $IPL:5003 $KEY TXID INDEX"
