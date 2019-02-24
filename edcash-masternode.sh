@@ -19,8 +19,8 @@ NC='\033[0m'
 IP==$(curl -s4 icanhazip.com)
 echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
 read KEY
-sleep 2
 
+sleep 5
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
 sudo wget -O edcashmasternodeinstall.tar.gz  https://raw.githubusercontent.com/edcash-project/masternode/master/edcashmasternodeinstall.tar.gz
