@@ -17,10 +17,8 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 IP==$(curl -s4 icanhazip.com)
-echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
-read KEY
 
-sleep 1
+sleep 2
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
 sudo wget -O edcashmasternodeinstall.tar.gz  https://raw.githubusercontent.com/edcash-project/masternode/master/edcashmasternodeinstall.tar.gz
@@ -61,16 +59,17 @@ sudo ufw allow 5003/tcp &>/dev/null
 sudo ufw logging on &>/dev/null
 echo "y" | sudo ufw enable &>/dev/null
 echo -e "${GREEN}Completion: 90%...${NC}"
-sleep 3
+sleep 2
 
 sudo chmod +x /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli
 sudo mv /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli /usr/local/bin
-sleep 4
+sleep 2
 
+sudo mkdir /root/.edcash
 echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
 read KEY
 
-sudo mkdir /root/.edcash
+sleep 2
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > /root/.edcash/edcash.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/.edcash/edcash.conf
 echo "rpcport=5332" >> /root/.edcash/edcash.conf
