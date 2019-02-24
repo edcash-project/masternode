@@ -67,6 +67,9 @@ sudo chmod +x /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstal
 sudo mv /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli /usr/local/bin
 sleep 4
 
+echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
+read KEY
+
 sudo mkdir /root/.edcash
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > /root/.edcash/edcash.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/.edcash/edcash.conf
