@@ -92,5 +92,4 @@ edcashd -datadir=/root/.edcash
 rm -rf /root/edcashmasternodeinstall.tar.gz &>/dev/null
 rm -rf /root/edcashmasternodeinstall &>/dev/null
 echo -e "${GREEN}you masternode is installed and runing%...${NC}"
-sleep 2
 echo "${RED}please configure you masternode.conf in windows EX: mn1 $IPL:5003 $KEY TXID INDEX"
