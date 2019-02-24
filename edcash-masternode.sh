@@ -16,11 +16,11 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-IPL=$(curl -s4 icanhazip.com)
 IP==$(curl -s4 icanhazip.com)
 echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
 read KEY
 sleep 2
+
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
 echo -e "${GREEN}Completion: 2%...${NC}"
@@ -43,6 +43,7 @@ libboost-program-options-dev libboost-system-dev libboost-test-dev libboost-thre
 bsdmainutils libdb4.8++-dev libminiupnpc-dev libgmp3-dev ufw pkg-config libevent-dev libdb5.3++ unzip libzmq5 &>/dev/null
 echo -e "${GREEN}Completion: 75%...${NC}"
 sleep 2
+
 cd /var
 sudo touch swap.img &>/dev/null
 sudo chmod 600 swap.img &>/dev/null
@@ -54,6 +55,7 @@ sudo echo "/var/swap.img none swap sw 0 0" >> /etc/fstab &>/dev/null
 echo -e "${GREEN}Completion: 85%...${NC}"
 cd
 sleep 2
+
 sudo apt-get install -y ufw &>/dev/null
 sudo ufw allow ssh/tcp &>/dev/null
 sudo ufw limit ssh/tcp &>/dev/null
@@ -62,9 +64,11 @@ sudo ufw logging on &>/dev/null
 echo "y" | sudo ufw enable &>/dev/null
 echo -e "${GREEN}Completion: 90%...${NC}"
 sleep 2
+
 sudo chmod +x /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli
 sudo mv /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli /usr/local/bin
 sleep 2
+
 sudo mkdir /root/.edcash
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > /root/.edcash/edcash.conf
 echo "rpcpassword=pass"`shuf -i 100000-10000000 -n 1` >> /root/.edcash/edcash.conf
@@ -92,4 +96,3 @@ edcashd -datadir=/root/.edcash
 rm -rf /root/edcashmasternodeinstall.tar.gz &>/dev/null
 rm -rf /root/edcashmasternodeinstall &>/dev/null
 echo -e "${GREEN}you masternode is installed and runing%...${NC}"
-echo "${RED}please configure you masternode.conf in windows EX: mn1 $IPL:5003 $KEY TXID INDEX"
