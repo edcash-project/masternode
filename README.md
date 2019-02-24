@@ -6,6 +6,7 @@
 2. Login to your newly launched server
 3. Copy and paste the following line into the server:
 
+```apt-get -y install curl wget```
 ```curl -sL https://raw.githubusercontent.com/edcash-project/masternode/master/edcash-masternode.sh | sudo -E bash -```
 
 4. Open your wallet debug console:
