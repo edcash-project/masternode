@@ -20,7 +20,7 @@ IP==$(curl -s4 icanhazip.com)
 echo -e "${GREEN}Please enter your private key: (Copy from Windows and right click to paste and press enter)${NC}"
 read KEY
 
-sleep 5
+sleep 1
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
 sudo wget -O edcashmasternodeinstall.tar.gz  https://raw.githubusercontent.com/edcash-project/masternode/master/edcashmasternodeinstall.tar.gz
@@ -61,7 +61,7 @@ sudo ufw allow 5003/tcp &>/dev/null
 sudo ufw logging on &>/dev/null
 echo "y" | sudo ufw enable &>/dev/null
 echo -e "${GREEN}Completion: 90%...${NC}"
-sleep 2
+sleep 3
 
 sudo chmod +x /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli
 sudo mv /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli /usr/local/bin
