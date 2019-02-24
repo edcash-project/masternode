@@ -65,7 +65,7 @@ sleep 2
 
 sudo chmod +x /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli
 sudo mv /root/edcashmasternodeinstall/edcashd /root/edcashmasternodeinstall/edcash-cli /usr/local/bin
-sleep 2
+sleep 4
 
 sudo mkdir /root/.edcash
 echo "rpcuser=user"`shuf -i 100000-10000000 -n 1` > /root/.edcash/edcash.conf
