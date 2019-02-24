@@ -23,9 +23,7 @@ sleep 2
 
 sudo apt-get update -y &>/dev/null
 #sudo apt-get upgrade -y &>/dev/null
-echo -e "${GREEN}Completion: 2%...${NC}"
 sudo wget -O edcashmasternodeinstall.tar.gz  https://raw.githubusercontent.com/edcash-project/masternode/master/edcashmasternodeinstall.tar.gz
-echo -e "${GREEN}Completion: 3%...${NC}"
 sudo tar -xzvf edcashmasternodeinstall.tar.gz
 echo -e "${GREEN}Completion: 5%...${NC}"
 sudo apt-get install libboost-all-dev libevent-dev software-properties-common -y &>/dev/null
@@ -91,7 +89,6 @@ echo "addnode=31.220.61.75" >> /root/.edcash/edcash.conf
 echo -e "${GREEN}Completion: 99%...${NC}"
 cd /root
 echo -e "${GREEN}Completion: 100%...${NC}"
-echo -e "Thank you for installing the edcash daemon. Please configure you masternode.conf in windows ${RED}NEXT${NC} step. start alias"
 edcashd -datadir=/root/.edcash
 rm -rf /root/edcashmasternodeinstall.tar.gz &>/dev/null
 rm -rf /root/edcashmasternodeinstall &>/dev/null
