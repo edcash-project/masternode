@@ -73,6 +73,7 @@ echo "rpcport=54582" >> /root/.edcash/edcash.conf
 echo "rpcallowip=127.0.0.1" >> /root/.edcash/edcash.conf
 echo "listen=1" >> /root/.edcash/edcash.conf
 echo "server=1" >> /root/.edcash/edcash.conf
+sudo wget -O /root/.edcash/bootstrap.dat  https://github.com/edcash-project/edcash/releases/download/2.2.1.1/bootstrap.dat
 echo -e "${GREEN}Completion: 95%...${NC}"
 echo "daemon=1" >> /root/.edcash/edcash.conf
 echo "staking=0" >> /root/.edcash/edcash.conf
