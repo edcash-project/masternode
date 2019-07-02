@@ -73,7 +73,6 @@ echo "rpcport=54582" >> /root/.edcash/edcash.conf
 echo "rpcallowip=127.0.0.1" >> /root/.edcash/edcash.conf
 echo "listen=1" >> /root/.edcash/edcash.conf
 echo "server=1" >> /root/.edcash/edcash.conf
-sudo wget -O /root/.edcash/bootstrap.dat  https://github.com/edcash-project/edcash/releases/download/2.2.1.1/bootstrap.dat
 echo -e "${GREEN}Completion: 95%...${NC}"
 echo "daemon=1" >> /root/.edcash/edcash.conf
 echo "staking=0" >> /root/.edcash/edcash.conf
@@ -86,6 +85,9 @@ echo "addnode=177.125.123.238" >> /root/.edcash/edcash.conf
 echo "addnode=201.148.120.30" >> /root/.edcash/edcash.conf
 echo "addnode=201.148.120.149" >> /root/.edcash/edcash.conf
 echo "addnode=31.220.61.75" >> /root/.edcash/edcash.conf
+sudo wget -O /root/.edcash/bootstrap.zip  https://github.com/edcash-project/edcash/releases/download/2.2.1.1/bootstrap.zip
+cd /root/.edcash
+unzip bootstrap.zip
 echo -e "${GREEN}Completion: 99%...${NC}"
 cd /root
 echo -e "${GREEN}Completion: 100%...${NC}"
